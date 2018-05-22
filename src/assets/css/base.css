@@ -1,0 +1,235 @@
+@charset "UTF-8";
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  /*font-family: 'Lato', sans-serif;*/
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+  color: #333;
+  font-size: 14px;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+input,
+textarea {
+  outline: none;
+  border: none;
+  resize: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+.clearfix:after,
+.clearfix:before {
+  content: "";
+  display: block;
+  height: 0;
+  line-height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.l_left {
+  float: left;
+}
+.r_right {
+  float: right;
+}
+@media (min-width: 320px) {
+  html {
+    font-size: 42.6667px;
+  }
+}
+@media (min-width: 360px) {
+  html {
+    font-size: 48px;
+  }
+}
+@media (min-width: 375px) {
+  html {
+    font-size: 50px;
+  }
+}
+@media (min-width: 384px) {
+  html {
+    font-size: 51.2px;
+  }
+}
+@media (min-width: 414px) {
+  html {
+    font-size: 55.2px;
+  }
+}
+@media (min-width: 448px) {
+  html {
+    font-size: 59.7333px;
+  }
+}
+@media (min-width: 480px) {
+  html {
+    font-size: 48px;
+  }
+}
+@media (min-width: 512px) {
+  html {
+    font-size: 68.2667px;
+  }
+}
+@media (min-width: 544px) {
+  html {
+    font-size: 72.5333px;
+  }
+}
+@media (min-width: 576px) {
+  html {
+    font-size: 76.8px;
+  }
+}
+@media (min-width: 608px) {
+  html {
+    font-size: 81.0667px;
+  }
+}
+@media (min-width: 640px) {
+  html {
+    font-size: 85.3333px;
+  }
+}
+@media (min-width: 750px) {
+  html {
+    font-size: 100px;
+  }
+}
+/*头部*/
+header {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 1.08rem;
+  line-height: 1.08rem;
+  text-align: center;
+  color: #fff;
+  background-color: #9E7831;
+  font-size: .38rem;
+  box-shadow: 0 3px 5px #ccc;
+  z-index: 10;
+}
+header .back {
+  height: 1.08rem;
+  width: 1.08rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../publics/images/return_40.png") no-repeat center;
+  background-size: 0.4rem 0.4rem;
+}
+header .menu {
+  height: 1.08rem;
+  width: 1.08rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../publics/images/menu.png") no-repeat center;
+  background-size: 0.4rem 0.4rem;
+}
+header .more {
+  height: 1.08rem;
+  width: 1.08rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url("../publics/images/more.png") no-repeat center;
+  background-size: 0.4rem 0.4rem;
+}
+header .collect {
+  height: 1.08rem;
+  width: 1.08rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url("../publics/images/empty_star.png") no-repeat center;
+  background-size: 0.4rem 0.4rem;
+}
+header .collected {
+  height: 1.08rem;
+  width: 1.08rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url("../publics/images/full_star.png") no-repeat center;
+  background-size: 0.4rem 0.4rem;
+}
+.menuShade {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 1.08rem;
+  left: 0;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.4);
+}
+.menuShade .nav {
+  width: 30%;
+  background: #9E7831;
+  height: 100%;
+}
+.menuShade .nav ul {
+  width: 100%;
+}
+.menuShade .nav ul li {
+  width: 100%;
+}
+.menuShade .nav ul li a {
+  display: block;
+  width: 100%;
+  padding: .2rem;
+  text-align: center;
+  color: #fff;
+  font-size: .28rem;
+}
+.moreShade {
+  display: none;
+  position: absolute;
+  top: .1rem;
+  right: .1rem;
+  background: #fff;
+  width: 30%;
+  z-index: 1000;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+.moreShade ul {
+  border-radius: 10px;
+}
+.moreShade ul li a {
+  display: block;
+  padding: .2rem;
+  font-size: .3rem;
+  width: 100%;
+  background: #fff;
+}
+.moreShade ul li a:hover {
+  background: #e1ffed;
+}
+.content {
+  position: fixed;
+  top: 1.08rem;
+  bottom: .2rem;
+  width: 100%;
+  overflow: auto;
+}

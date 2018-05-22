@@ -1,0 +1,48 @@
+@charset "UTF-8";
+.search_medical_form{
+  margin-bottom:.5rem;
+  .input_row {
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    padding: 0.1rem .3rem;
+    label {
+      flex:2;
+      height: 1.08rem;
+      line-height: 1.08rem;
+      font-size: 0.36rem;
+    }
+    input {
+      flex: 5;
+      height: 1.08rem;
+      line-height: 1.08rem;
+      font-size: .34rem;
+      color: #333333;
+      text-indent: 5px;
+    }
+    input[type=text]:focus, input[type=password]:focus {
+      border-bottom: 2px solid #f00;
+    }
+    .outDate{flex:5;display:flex;}
+    .outDateStart{flex:none;width:45%;}
+    .outDateEnd{flex:none;width:45%;text-align:center;}
+    span {
+      width:5%;
+      height: 1.08rem;
+      line-height: 1.08rem;
+      font-size: 0.36rem;
+      text-align: center;
+    }
+  }
+}
+.search_medical_btn{
+  display:block;
+  height:1rem;
+  line-height:1rem;
+  text-align: center;
+  width:80%;
+  margin:0 10%;
+  background: #9E7831;border:none;
+  font-size:.34rem;
+  color:#fff;
+}

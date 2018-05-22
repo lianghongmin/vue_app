@@ -1,0 +1,119 @@
+{
+	"msg": "查询成功",
+	"status": 200,
+	"success": true,
+	"data": {
+		"borrowedFirstGuidList": [{
+			"checkStatus": 2,
+			"firstGuid": "4014c4e0e54e48438f094dbce348e839"
+		}, {
+			"checkStatus": 1,
+			"firstGuid": "ec70d2d60ecc4385a7193a8901e7741f"
+		}],
+		"page": {
+			"currentPage": 1,
+			"pageSize": 10,
+			"pageShow": 5,
+			"rule": 2,
+			"begin": 0,
+			"rows": 9,
+			"totalPage": 2,
+			"list": [{
+						"office_name": "干部病房",
+						"out_hospital_date": "2017-12-01",
+						"mr_id": "D295750",
+						"trace_date": "2018-04-18",
+						"id_number": "64012119630615041X",
+						"patient_name": "王立平",
+						"out_hospital_type_name": "正常",
+						"firstGuid": "4014c4e0e54e48438f094dbce348e839"
+					}, {
+						"office_name": "干部病房",
+						"out_hospital_date": "2017-12-01",
+						"mr_id": "D318990",
+						"trace_date": "2018-04-19",
+						"id_number": "640104197311241832",
+						"patient_name": "钮彦明",
+						"out_hospital_type_name": "正常",
+						"firstGuid": "ec70d2d60ecc4385a7193a8901e7741f"
+					},
+					{
+						"office_name": "干部病房",
+						"out_hospital_date": "2017-12-01",
+						"mr_id": "D295750",
+						"trace_date": "2018-04-18",
+						"id_number": "64012119630615041X",
+						"patient_name": "王立平",
+						"out_hospital_type_name": "正常",
+						"firstGuid": "4014c4e0e54e48438f094dbce348e555"
+					}, {
+						"office_name": "干部病房",
+						"out_hospital_date": "2017-12-01",
+						"mr_id": "D318990",
+						"trace_date": "2018-04-19",
+						"id_number": "640104197311241832",
+						"patient_name": "钮彦明",
+						"out_hospital_type_name": "正常",
+						"firstGuid": "ec70d2d60ecc4385a7193a8901e774155f"
+					},
+					{
+						"office_name": "干部病房",
+						"out_hospital_date": "2017-12-01",
+						"mr_id": "D295750",
+						"trace_date": "2018-04-18",
+						"id_number": "64012119630615041X",
+						"patient_name": "王立平",
+						"out_hospital_type_name": "正常",
+						"firstGuid": "4014c4e0e54e48438f094dbce348e939"
+					}, {
+						"office_name": "干部病房",
+						"out_hospital_date": "2017-12-01",
+						"mr_id": "D318990",
+						"trace_date": "2018-04-19",
+						"id_number": "640104197311241832",
+						"patient_name": "钮彦明",
+						"out_hospital_type_name": "正常",
+						"firstGuid": "ec70d2d60ecc4385a7193a8901e7781f"
+					},
+					{
+						"office_name": "干部病房",
+						"out_hospital_date": "2017-12-01",
+						"mr_id": "D295750",
+						"trace_date": "2018-04-18",
+						"id_number": "64012119630615041X",
+						"patient_name": "王立平",
+						"out_hospital_type_name": "正常",
+						"firstGuid": "4014c4e0e54e48438f094dbce3489839"
+					}, {
+						"office_name": "干部病房",
+						"out_hospital_date": "2017-12-01",
+						"mr_id": "D318990",
+						"trace_date": "2018-04-19",
+						"id_number": "640104197311241832",
+						"patient_name": "钮彦明",
+						"out_hospital_type_name": "正常",
+						"firstGuid": "ec70d2d60ecc4385a7193a8901e0741f"
+					},
+					{
+						"office_name": "干部病房",
+						"out_hospital_date": "2017-12-01",
+						"mr_id": "D295750",
+						"trace_date": "2018-04-18",
+						"id_number": "64012119630615041X",
+						"patient_name": "王立平",
+						"out_hospital_type_name": "正常",
+						"firstGuid": "4014c4e0e54e48438f094dbce3486839"
+					}, {
+						"office_name": "干部病房",
+						"out_hospital_date": "2017-12-01",
+						"mr_id": "D318990",
+						"trace_date": "2018-04-19",
+						"id_number": "640104197311241832",
+						"patient_name": "钮彦明",
+						"out_hospital_type_name": "正常",
+						"firstGuid": "ec70d2d60ecc4385a7193a8901e7041f"
+					}
+				]
+		}
+	}
+}
