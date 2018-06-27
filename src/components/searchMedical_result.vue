@@ -10,12 +10,13 @@
                 <ul class="search_medical_result">
                 <li v-for="item in list">
                             <!--<router-link :to="{path:'/medical_detail',query: {guid:item.firstGuid}}">-->
-                            <a @click='getDetail(item.firstGuid)'>
+                            <a>
                                 <p>姓名：<span>{{item.patient_name}}</span>&nbsp;病案号：<span>{{item.mr_id}}</span></p>
                                 <p>出院科室：<span>{{item.office_name}}</span></p>
                                 <p>出院日期：<span>{{item.out_hospital_date}}</span></p>
                                 <!--<p>所属机构：<span>{{ item.outInstitution}}</span></p>-->
-                                <span class="icon_star"  @click.prevent='collectedToggle($event,item.guid)'></span>
+                                <p><a class="scan" @click='getDetail(item.firstGuid)'>查看病案</a><a class="scan" @click='getDicom(item.firstGuid)'>查看影像</a></p>
+                                <!--<span class="icon_star"  @click.prevent='collectedToggle($event,item.guid)'></span>-->
                            </a>
                            <!-- </router-link>-->
                     </li>
@@ -209,11 +210,53 @@ export default {
                   ,btn: '我知道了'
               });
        })
+    },
+    //查看影像
+    getDicom(guid){
+     
+      let sessionArray=[{
+                          "firstGuid": "13ec3db0602a41b6a72998b2c9d8f01a",
+                          "sessionId": "35004747-8584-49aa-86b9-53c73778e37f"
+                        }, {
+                          "firstGuid": "72376d8603e54e758648785782a567c0",
+                          "sessionId": "3b00fa92-2397-49c1-9743-c0c8c1f9554e"
+                        }, {
+                          "firstGuid": "ef87c29088f548948754cc9900709eb1",
+                          "sessionId": "452da435-6b56-462f-8908-e22989db6137"
+                        }, {
+                          "firstGuid": "3092d6cda4cf4044b8b7ba6b99f13f9b",
+                          "sessionId": "519da29e-a99b-4a16-8a38-fec1e26c754c"
+                        },
+                        {
+                          "firstGuid": "ec70d2d60ecc4385a7193a8901e7741f",
+                          "sessionId": "69cbce7f-2303-4415-9c58-a410f6488dca"
+                        }, {
+                          "firstGuid": "247e8e64ccff4f86826860a347a180b4",
+                          "sessionId": "6e31bbbb-e848-492d-bdab-65626d343438"
+                        }
+                      ];
+         let session="";             
+         for(var i=0;i<sessionArray.length;i++){
+             let Guid =sessionArray[i].firstGuid;
+             let sessionId=sessionArray[i].sessionId;
+            if(guid==Guid){
+              session=sessionId;
+              break;
+             }
+         }
+         if(session){
+           location.href="http://192.168.21.90:8081/#/?sessionId="+session;
+         }else{
+           layer.open({
+                  content: "暂无影像数据"
+                  ,btn: '我知道了'
+           });
+         }
     }
    }
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  
+ 
 </style>

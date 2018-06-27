@@ -15,20 +15,20 @@ import 'mint-ui/lib/style.css'
 
 Vue.use(MintUI)
 
-//import AlloyFinger from 'alloyfinger/alloy_finger' // 手势库
-//import AlloyFingerVue from 'alloyfinger/vue/alloy_finger.vue'
-//Vue.use(AlloyFingerVue, {
- // AlloyFinger
-//})
+import AlloyFinger from 'alloyfinger/alloy_finger' // 手势库
+import AlloyFingerVue from 'alloyfinger/vue/alloy_finger.vue'
+Vue.use(AlloyFingerVue, {
+  AlloyFinger
+})
 
 import './assets/css/app.css'
 
 import layer from '../static/layer_mobile/layer.js'
 
-
 Vue.config.productionTip = false
 //Vue.prototype.api='http://ec2-52-80-156-87.cn-north-1.compute.amazonaws.com.cn:8090/phr-mobile';
-Vue.prototype.api='http://192.168.21.85:28085/phr-mobile';
+//Vue.prototype.api='http://192.168.21.85:28085/phr-mobile';
+Vue.prototype.api='http://c1.kurumi.com.cn/phr-mobile'
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

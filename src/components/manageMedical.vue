@@ -47,22 +47,27 @@ export default {
   mounted:function(){
      let Storedata=eval('(' + window.localStorage.getItem("data") + ')');
      this.token=window.localStorage.getItem("token");
-      if(!this.token){
+     if(!this.token){
           this.$router.push({
               name: 'login',
             
           });
       }
-    this.msg=window.localStorage.getItem("msg");
+      var msg=window.localStorage.getItem("msg");
+     
+      if(msg=='null'){
+        msg="";
+      }
+    this.msg=msg;
     this.dislist=eval('(' + window.localStorage.getItem("dislist") + ')');
     //console.log(this.dislist)
   },
   methods:{
      manageMedical_result(code){
         this.$router.push({
-                      name: 'manageMedical_result',
-                     query: {uniq_code:code}
-                    });
+                    name: 'manageMedical_result',
+                    query: {uniq_code:code}
+        });
      },
    search() {
     //console.log(this.msg)

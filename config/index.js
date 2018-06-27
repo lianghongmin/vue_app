@@ -11,17 +11,18 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-     /* '/': {  //使用"/api"来代替"http://192.168.21.85:28085" 
-        target: 'http://192.168.21.85:28085', //源地址 
+      '/': {  //使用"/api"来代替"http://192.168.21.85:28085" 
+        target: 'http://c1.kurumi.com.cn', //源地址 
         changeOrigin: true, //改变源 
         pathRewrite: { 
-        '^/': 'http://192.168.21.85:28085' //路径重写 
+        '^/': 'http://c1.kurumi.com.cn' //路径重写 
         } 
-     } */
+     } 
     },
 
     // Various Dev Server settings
     host: '192.168.21.90', // can be overwritten by process.env.HOST
+    //host:"localhost",
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser:true,
     errorOverlay: true,

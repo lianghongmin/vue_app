@@ -33,7 +33,8 @@ export default {
   name: 'index',
   data () {
     return {
-      
+      token:"",
+      userdata:null,
     }
   },
   created(){
@@ -41,7 +42,19 @@ export default {
      window.localStorage.removeItem("dislist");
      window.localStorage.removeItem("searchQuery");
      window.localStorage.removeItem("borrowQuery");
-     this.token=window.localStorage.getItem("token");
+     var path=decodeURIComponent(this.$route.fullPath);
+     let dataJson=this.strToJson(path);
+     this.token=dataJson.token||window.localStorage.getItem("token");
+     this.userdata=dataJson.userData||window.localStorage.getItem("data");
+     // this.token=this.$route.query.token||window.localStorage.getItem("token");
+     // this.userdata=this.$route.query.userData||window.localStorage.getItem("data");
+     //console.log(this.userdata);
+
+    // console.log(decodeURIComponent(this.$route.fullPath))
+     //console.log(this.$route)
+     window.localStorage.setItem("token",this.token);
+     window.localStorage.setItem("data",this.userdata);
+    // this.token=window.localStorage.getItem("token");
      if(!this.token){
           this.$router.push({
               name: 'login',
@@ -56,7 +69,16 @@ export default {
     navHeader
   },
   methods:{
-   
+   strToJson(path){
+         path=path.slice(path.indexOf("?")+1,path.length);
+        let Json={};
+        let arr=path.split("&");
+        for(var i=0;i<arr.length;i++){
+         let item=arr[i].split("=");
+         Json[item[0]]=item[1];
+         }
+         return Json;
+   }
   }
 }
 </script>

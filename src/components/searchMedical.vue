@@ -95,9 +95,9 @@ export default {
 
     this.token=window.localStorage.getItem("token");
     let Storedata=eval('(' + window.localStorage.getItem("data") + ')');
+   // console.log(Storedata)
     this.outDepartmentId= Storedata.officeCode;
     this.outDepartment= Storedata.officeName;
-    let medicalQuery=eval('(' + window.localStorage.getItem("searchQuery") + ')');
     if(!this.token){
           this.$router.push({
               name: 'login',
@@ -106,6 +106,8 @@ export default {
               }
           });
       } 
+    let medicalQuery=eval('(' + window.localStorage.getItem("searchQuery") + ')');
+    
     if(medicalQuery){
         this.idNumber=medicalQuery.idNumber;
         this.patientName=medicalQuery.patientName;

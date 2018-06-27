@@ -1,7 +1,7 @@
 <template>
   <div>
     <!--头部-->
-    <!--<nav-header >
+    <nav-header >
        <span slot="headTitle">移动病案登录</span>
     </nav-header>
     <div class="content">
@@ -16,7 +16,7 @@
         </div>
        </form>
        <a class="search_medical_btn" @click="toLogin">登录</a>
-    </div>-->
+    </div>
   </div>
 </template>
 <script>
@@ -35,9 +35,9 @@ export default {
   },
   mounted:function(){
     window.localStorage.removeItem("token"); 
-    this.username=this.$route.query.username;
-    this.pwd=this.$route.query.pwd;
-    this.toLogin();
+   // this.username=this.$route.query.username;
+   // this.pwd=this.$route.query.pwd;
+   // this.toLogin();
   },
   methods:{
     toLogin(){
@@ -52,16 +52,16 @@ export default {
        var url=this.api+"/user/login";
       // var url="/phr-mobile/user/login";
        var params={'loginName':this.username,'password':this.pwd};
-       Indicator.open({
+       /*Indicator.open({
             text: '',
             spinnerType: 'fading-circle'
-        });
+        });*/
        this.axios.post(url, this.qs.stringify(params)).then((result)=>{
-           Indicator.close();
+          // Indicator.close();
            var data=result.data;
            if(data.success){
                   // console.log(data)
-                   // window.localStorage.setItem("username",this.username);
+                  // window.localStorage.setItem("username",this.username);
                   //  window.localStorage.setItem("pwd",this.pwd);
                     window.localStorage.setItem("data",JSON.stringify(data.data.user));
                     var token=data.data.token;
@@ -80,7 +80,7 @@ export default {
                   return;
                 }
        }).catch((error)=>{
-            Indicator.close();
+           // Indicator.close();
             layer.open({
                 content: '网络不稳定，登录失败'
                 ,btn: '确定'
