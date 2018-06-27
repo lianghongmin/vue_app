@@ -28,7 +28,8 @@ import layer from '../static/layer_mobile/layer.js'
 Vue.config.productionTip = false
 //Vue.prototype.api='http://ec2-52-80-156-87.cn-north-1.compute.amazonaws.com.cn:8090/phr-mobile';
 //Vue.prototype.api='http://192.168.21.85:28085/phr-mobile';
-Vue.prototype.api='http://c1.kurumi.com.cn/phr-mobile'
+Vue.prototype.api='http://c1.kurumi.com.cn/phr-mobile';
+Vue.prototype.api1="http://192.168.21.90:8081";
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

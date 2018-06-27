@@ -306,7 +306,7 @@ export default {
          }
 
          if(session){
-            location.href="http://192.168.21.90:8081/#/?sessionId="+session;
+            location.href=this.api1+"?sessionId="+session;
          }else{
            layer.open({
                   content: "暂无影像数据"
